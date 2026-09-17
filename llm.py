@@ -153,7 +153,7 @@ for weekcol in range(4, 29):
 		#print(f"\t-----{day}-----",end="\n")
 		# aggregate all cellsmorning = ""
 		if timetable[dayline+1][weekcol]!="":
-			morning = timetable[dayline+2][weekcol]+"\n"
+			morning = timetable[dayline+1][weekcol]+"\n"
 		morning += timetable[dayline+2][weekcol]+"\n"+timetable[dayline+3][weekcol]
 		noon = timetable[dayline+4][weekcol]
 		afternoon = timetable[dayline+5][weekcol]+"\n"+timetable[dayline+6][weekcol]
