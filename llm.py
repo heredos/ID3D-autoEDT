@@ -151,8 +151,10 @@ for weekcol in range(4, 29):
 	# we have 7 days a week, starting line 4, each day spanning 8 lines
 	for dayline in range(4, 44, 8):
 		#print(f"\t-----{day}-----",end="\n")
-		# aggregate all cells
-		morning = timetable[dayline+2][weekcol]+"\n"+timetable[dayline+3][weekcol]
+		# aggregate all cellsmorning = ""
+		if timetable[dayline+1][weekcol]!="":
+			morning = timetable[dayline+2][weekcol]+"\n"
+		morning += timetable[dayline+2][weekcol]+"\n"+timetable[dayline+3][weekcol]
 		noon = timetable[dayline+4][weekcol]
 		afternoon = timetable[dayline+5][weekcol]+"\n"+timetable[dayline+6][weekcol]
 
